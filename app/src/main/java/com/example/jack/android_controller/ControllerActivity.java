@@ -12,16 +12,12 @@ public class ControllerActivity extends AppCompatActivity {
    @Override
    protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_controller);
-
 
       Intent intent = getIntent();
-      addr = intent.getStringExtra("addr");
-      port = intent.getIntExtra("port", 20);
+      this.addr = intent.getStringExtra("addr");
+      this.port = intent.getIntExtra("port", 20);
 
-      intent = new Intent(getApplicationContext(), MultitouchView.class);
-      intent.putExtra("addr", addr);
-      intent.putExtra("port", port);
+      setContentView(R.layout.activity_controller);
    }
 
    String getAddr() {

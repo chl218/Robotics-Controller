@@ -22,18 +22,7 @@ public class UDPClient extends AsyncTask<Void, Void, Void> {
       this.theta = theta;
    }
 
-   public static byte[] intsToBytes(int[] ints) {
-      ByteBuffer bb = ByteBuffer.allocate(ints.length * 4);
-      IntBuffer ib = bb.asIntBuffer();
-      for (int i : ints) ib.put(i);
-      return bb.array();
-   }
 
-   public static int[] bytesToInts(byte[] bytes) {
-      int[] ints = new int[bytes.length / 4];
-      ByteBuffer.wrap(bytes).asIntBuffer().get(ints);
-      return ints;
-   }
 
    @Override
    protected Void doInBackground(Void... arg0) {
@@ -43,10 +32,10 @@ public class UDPClient extends AsyncTask<Void, Void, Void> {
          // Create UDP socket
          socket = new DatagramSocket();
          // Create the message
-         int[] msg = {accel, theta};
+         String msg = "" + accel + " " + theta;
 
          // Transform message to byte array due to parameter type
-         byte[] send = intsToBytes(msg);
+         byte[] send = msg.getBytes();
 
          // Transform String address type to InetAddress type
          InetAddress inetAddress = InetAddress.getByName(dstAddress);
