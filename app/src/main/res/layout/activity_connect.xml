@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:screenOrientation="landscape"
+                tools:context="com.example.jack.android_controller.ConnectActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTextAddr"
+        android:textAlignment="center"
+        android:hint="Server Address" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/editTextAddr"
+        android:layout_alignRight="@+id/editTextAddr"
+        android:layout_alignEnd="@+id/editTextAddr"
+        android:id="@+id/editTextPort"
+        android:textAlignment="center"
+        android:hint="Server Port" />
+
+    <Button
+        android:text="Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonConnect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
