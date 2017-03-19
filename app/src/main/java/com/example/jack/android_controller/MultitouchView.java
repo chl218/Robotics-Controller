@@ -115,6 +115,18 @@ public class MultitouchView extends View {
                }
                myClient = new UDPClient(addr, port, msg[0], msg[1]);
                myClient.execute();
+
+               myClient = new UDPClient(addr, port, msg[0], msg[1]);
+               myClient.execute();
+
+               myClient = new UDPClient(addr, port, msg[0], msg[1]);
+               myClient.execute();
+
+               myClient = new UDPClient(addr, port, msg[0], msg[1]);
+               myClient.execute();
+
+               myClient = new UDPClient(addr, port, msg[0], msg[1]);
+               myClient.execute();
                break;
          } // end-switch
 

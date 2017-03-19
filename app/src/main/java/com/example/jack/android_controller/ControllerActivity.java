@@ -31,14 +31,11 @@ public class ControllerActivity extends AppCompatActivity {
    private Runnable runnableCode = new Runnable() {
       @Override
       public void run() {
-         String url = addr + "/image.jpg";
+         String url = "http://100.81.39.82/image.jpg";
 
-         try {
-            new DownloadImageTask((ImageView) findViewById(R.id.imageView)).execute(url);
-         }
-         catch(Exception e) {
-            e.printStackTrace();
-         }
+         System.out.println(url);
+         new DownloadImageTask((ImageView) findViewById(R.id.imageView)).execute(url);
+
 
          handler.postDelayed(runnableCode, 60);
 
